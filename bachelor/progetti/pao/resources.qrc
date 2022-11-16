@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="file.png">res/icons/file.png</file>
+        <file alias="contact.png">res/icons/contact.png</file>
+        <file alias="location.png">res/icons/location.png</file>
+        <file alias="image.png">res/icons/image.png</file>
+        <file alias="more.png">res/icons/more.png</file>
+        <file alias="send.png">res/icons/send.png</file>
+        <file alias="attach.png">res/icons/attach.png</file>
+        <file alias="room.png">res/icons/room.png</file>
+        <file alias="profile.png">res/icons/profile.png</file>
+    </qresource>
+</RCC>

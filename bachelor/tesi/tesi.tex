@@ -1,0 +1,84 @@
+% I seguenti commenti speciali impostano:
+% 1. 
+% 2. PDFLaTeX come motore di composizione;
+% 3. tesi.tex come documento principale;
+% 4. il controllo ortografico italiano per l'editor.
+
+% !TEX encoding = UTF-8
+% !TEX TS-program = pdflatex
+% !TEX root = tesi.tex
+% !TEX spellcheck = it-IT
+
+% PDF/A filecontents
+\RequirePackage{filecontents}
+\begin{filecontents*}{\jobname.xmpdata}
+  \Title{Applicazione mobile per la gestione di tour cicloturistici}
+  \Author{Diego Stafa}
+  \Language{it-IT}
+  \Subject{Analisi, progettazione e sviluppo di un'applicazione mobile per la gestione di tour cicloturistici.}
+  \Keywords{mobile\sep flutter\sep dart\sep gps\sep}
+\end{filecontents*}
+
+\documentclass[10pt,
+               a4paper,
+               twoside,
+               openright,
+               english,                 
+               italian,                 
+               ]{book}    
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+\usepackage{colorprofiles}
+\usepackage[a-2b,mathxmp]{pdfx}[2018/12/22]
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, italian]{babel}
+\usepackage{bookmark}
+\usepackage{caption}
+\usepackage{chngpage,calc}
+\usepackage{csquotes}
+\usepackage{emptypage}
+\usepackage{epigraph}
+\usepackage{eurosym}
+%\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[binding=5mm]{layaureo}
+\usepackage{listings}
+\usepackage{microtype}
+\usepackage{mparhack,fixltx2e,relsize}
+\usepackage{nameref}
+\usepackage[font=small]{quoting}
+\usepackage{subfig}
+\usepackage[italian]{varioref}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{ltxtable}
+\usepackage[toc, acronym]{glossaries}
+\usepackage[backend=biber,style=verbose-ibid,hyperref,backref]{biblatex}
+
+\input{tesi-config}
+
+\begin{document}
+\frontmatter
+\input{inizio-fine/frontespizio}
+\input{inizio-fine/colophon}
+\input{inizio-fine/sommario}
+\input{inizio-fine/ringraziamenti}
+\input{inizio-fine/indici}
+\cleardoublepage
+
+\mainmatter
+\input{capitoli/capitolo-1}
+\input{capitoli/capitolo-2}
+\input{capitoli/capitolo-3}
+\input{capitoli/capitolo-4}
+
+\backmatter
+\printglossary[type=\acronymtype, title=Acronimi e abbreviazioni, toctitle=Acronimi e abbreviazioni]
+\printglossary[type=main, title=Glossario, toctitle=Glossario]
+\input{inizio-fine/bibliografia}
+
+\end{document}

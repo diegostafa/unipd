@@ -1,0 +1,332 @@
+/* HOME - NEWS - CONTATTI - HEADER - FOOTER*/
+
+* {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  font-size: 12pt;
+}
+
+#content {
+  padding: 4rem 0 1.5rem 0;
+  text-align: center;
+}
+
+li,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 0.9rem;
+}
+
+.top-nav,
+#show-overlay-btn,
+#logo img,
+footer,
+#overlay,
+.front-img,
+.news-item img,
+#go-content,
+#go-top,
+#admin-news,
+#news-container input {
+  display: none;
+}
+
+.news-item {
+  border: 1px solid black;
+  margin: 2rem 0;
+  padding: 0.5rem;
+}
+
+.news-item * {
+  margin: 0;
+  padding: 0;
+}
+
+.front-img {
+  display: none;
+}
+
+.section-block {
+  margin: 4rem 0;
+}
+
+a::after {
+  content: " (http://tecweb.studenti.math.unipd.it" attr(href) ") ";
+}
+
+.mail-link::after {
+  content: " (" attr(href) ") ";
+}
+
+.tel-link::after {
+  content: " (" attr(href) ") ";
+}
+
+/* MENU - MENU ADMIN*/
+
+#menu-container {
+  flex-direction: column;
+}
+
+.section-block,
+body {
+  box-shadow: none;
+}
+
+#dish-container {
+  height: min-content;
+  box-shadow: none;
+}
+/* .dish {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
+  align-items: center;
+} */
+
+#dish-container .dish {
+  grid-template-areas: "foto nome nome" "foto descrizione descrizione" "foto prezzo aggiungi";
+  grid-template-columns: 0.4fr 1fr 0.4fr;
+  grid-template-rows: 0.7fr 0.7fr 0.2fr;
+  align-items: initial;
+  flex-direction: row;
+  width: 70%;
+  margin: 1rem auto;
+  height: min-content;
+  max-height: min-content;
+  display: grid;
+  border: 1px solid black;
+  break-inside: avoid;
+}
+
+.dish.admin {
+  grid-template-areas: "checkbox" "foto " "nome " "descrizione " "prezzo ";
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr 1.5fr 0.5fr;
+}
+.dish .checkbox {
+  grid-area: checkbox;
+  margin: 0 auto;
+}
+.dish .photo {
+  grid-area: foto;
+  width: 100%;
+  height: 11rem;
+  object-fit: cover;
+}
+.dish .name {
+  width: 100%;
+  grid-area: nome;
+  font-size: 1.2rem;
+  align-self: center;
+  font-weight: bold;
+}
+.dish .description {
+  align-self: center;
+  grid-area: descrizione;
+  text-align: center;
+  padding: 0 2px;
+  font-size: 0.9rem;
+  word-break: break-all;
+}
+.dish .price {
+  height: min-content;
+  grid-area: prezzo;
+  font-size: 1rem;
+  margin: auto;
+}
+
+.dish .btnAdd {
+  grid-area: aggiungi;
+  width: 7rem;
+  margin: 0.5rem auto;
+}
+
+.price::after {
+  content: "€";
+}
+
+.hamburger-cart {
+  display: none;
+}
+
+.category:not(.selected),
+.container-cart {
+  display: none;
+}
+
+form.container-content .filter {
+  height: min-content;
+  margin-bottom: 0.5rem;
+}
+
+/* LOGIN - REGISTRAZIONE - AREA PERSONALE - CARRELLO */
+
+.error-message {
+  color: red;
+}
+
+dl {
+  margin: 2em 0em 3em 0em;
+  padding: 2rem 0;
+}
+
+dt {
+  font-weight: bold;
+  text-align: right;
+  width: 45%;
+  vertical-align: top;  
+}
+
+dd {
+  text-align: left;
+  width: 45%;
+  overflow-wrap: break-word;
+}
+
+dd, dt {
+  display: inline-block;
+  padding: 0.4em;
+}
+
+table {
+  margin: 1rem auto;
+  width: 80%;
+  border-collapse: collapse;
+}
+
+caption {
+  margin-bottom: 0.3em;
+  font-weight: bold;
+}
+
+th, td {
+  padding: 0.5em;
+  border: 1px solid black;
+}
+
+.functionality {
+  border: 1px dashed black;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/* 
+   ==================
+      CARRELLO
+   ================== 
+*/
+
+/* ====== RIEPILOGO ====== */
+
+#cart-items {
+  margin: auto;
+}
+
+#cart-items ul {
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+#cart-items li {
+  width: 95%;
+  display: grid;
+  overflow: hidden;
+  grid-template-areas:
+    "foto nome"
+    "foto descrizione"
+    "foto dettagli";
+  grid-template-columns: 0.6fr 1.4fr;
+  grid-template-rows: 0.5fr 2fr 0.5fr;
+  margin: 1rem auto;
+  box-shadow: none;
+  border: 1px solid black;
+}
+
+.item-right {
+  grid-area: dettagli;
+}
+
+.item-right p {
+  display: inline-block;
+  width: 45%;
+}
+
+.photo {
+  grid-area: foto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 140px;
+}
+
+.name {
+  grid-area: nome;
+  font-size: 14pt;
+  align-self: center;
+}
+
+.description {
+  grid-area: descrizione;
+  align-self: center;
+  text-align: center;
+  padding: 0 3px;
+}
+
+#total-price {
+  font-size: 1.5em;
+}
+
+/*---------- form -----------*/
+
+fieldset {
+  padding: 0.3em 3em;
+  background-color: white;
+}
+
+fieldset div {
+  width: 100%;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form label {
+  display: inline-block;
+  width: 20%;
+  vertical-align: middle;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  display: inline;
+  width: 70%;
+  margin: 0.5em 0;
+  padding: 0.7em;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+}
+
+.field-info {
+  font-size: 0.9em;
+  color: #555;
+}
+
+/*--------- errore 404 e 500 ---------*/
+.frame-img {
+  display: none;
+}

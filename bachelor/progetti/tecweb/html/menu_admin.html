@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pagina per modificare il menu di Fuji sushi">
+    <meta name="keywords" content="menu, Fuji, sushi, sushi,modifica menu">
+    <meta name="author" content="Rizzato Samuele, Stafa Diego, Wu Luciano">
+    <link rel="stylesheet" media="screen" href="/srizzato/css/style.css">
+    <link rel="stylesheet" media="print" href="/srizzato/css/print.css">
+    <noscript>
+        <link rel="stylesheet" media="screen" href="/srizzato/css/noscript.css">
+    </noscript>
+    <script src="/srizzato/js/script.js"></script>
+    <link rel="shortcut icon" type="image/png" href="/srizzato/img/utils/logo.png">
+    <title>Gestione Menu' - Fuji Sushi</title>
+    <page-name>Gestione menu</page-name>
+</head>
+
+<body>
+    <page-header />
+    <main id="content" class="menu">
+        <section class="section-block">
+            <h1 class="section-title">Inserisci una piatto</h1>
+            <div class="section-content">
+                <form action="menu_admin.php" method="post" id="form_add_dish" enctype="multipart/form-data">
+                    <fieldset>
+                        <legend>Dati del piatto</legend>
+                        <div>
+                            <label for="dish_name">Nome del piatto:</label>
+                            <input id="dish_name" name="dish_name" class="inputName" type="text"
+                                placeholder="inserisci il nome del piatto" pattern="^[A-Za-zàèìòùé0-9\s']{1,50}$"
+                                required />
+                        </div>
+                        <div>
+                            <label for="dish_description">Descrizione:</label>
+                            <textarea id="dish_description" name="dish_description" cols="100" rows="10"
+                                placeholder="inserisci la descrizione del piatto" required></textarea>
+                        </div>
+                        <div>
+                            <label for="dish_price">Inserisci prezzo:</label>
+                            <input id="dish_price" type="number" name="dish_price" required />
+                        </div>
+                        <div>
+                            <label for="img_file">Seleziona immagine:</label>
+                            <input name="img_file" id="img_file" type="file" required />
+                        </div>
+                        <div>
+                            <label for="dish_category">Seleziona categoria:</label>
+                            <insert-category-list />
+                        </div>
+                        <input type="reset" value="Ripristina" />
+                        <input type="submit" name="submit_add_dish" value="Inserisci" />
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+        <hr>
+        <section class="section-block">
+            <h1 class="section-title">Inserisci una categoria</h1>
+            <div class="section-content">
+                <form method="get" action="menu_admin.php" id="form_add_category">
+                    <fieldset>
+                        <legend>Dati della categoria</legend>
+                        <div>
+
+                            <label for="new_category">Nome della categoria:</label>
+                            <input type="text" id="new_category" name="new_category"
+                                placeholder="inserisci il nome della categoria" pattern="^[A-Za-zàèìòùé0-9]{1,100}$"
+                                required />
+                        </div>
+                    </fieldset>
+                    <input type="submit" name="submit_add_category" value="Inserisci" />
+                </form>
+            </div>
+        </section>
+        <hr>
+
+        <section class="section-block">
+            <h1 class="section-title">Rimuovi una categoria</h1>
+            <div class="section-content">
+                <delete-category-list />
+            </div>
+        </section>
+        <hr>
+
+        <section class="section-block vertical">
+            <h1 class="section-title">rimuovi dei piatti</h1>
+            <div class="section-content admin menu vertical">
+                <div id="menu-container">
+                    <div id="menu-side-panel">
+                        <category-list />
+                    </div>
+                    <dish-list />
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="go-top">
+        <a href="#content">
+            <img src="/srizzato/img/utils/up.png" alt="torna in cima alla pagina">
+        </a>
+    </div>
+    <footer>
+        <div class="foot-content">
+            <p class="foot-title">Contatti</p>
+            <ul>
+                <li><address>Via Trieste 63, Padova</address></li>
+                <li><a class="mail-link" href="mailto:tecweb.2021@gmail.com">tecweb.2021@gmail.com</a></li>
+                <li><a class="tel" href="tel:+042566888899">0425 6688 8899</a></li>
+                <li>Siamo aperti 24/7</li>
+            </ul>
+        </div>
+        <div class="foot-content">
+            <p class="foot-title">tecnologie utilizzate</p>
+            <ul>
+                <li>XHTML5</li>
+                <li>CSS3</li>
+                <li>ES2015</li>
+                <li>PHP7</li>
+                <li>MySQL</li>
+            </ul>
+        </div>
+        <div class="foot-content">
+            <p class="foot-title">proprietari</p>
+            <ul>
+                <li>Rizzato Samuele</li>
+                <li>Stafa Diego</li>
+                <li>Wu Luciano</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

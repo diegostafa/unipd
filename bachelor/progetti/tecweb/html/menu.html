@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pagina per mostrare il menu di Fuji sushi">
+    <meta name="keywords" content="menu, Fuji , sushi, piatti ,bevande, ristorante, giapponese">
+    <meta name="author" content="Rizzato Samuele, Stafa Diego, Wu Luciano">
+    <link rel="stylesheet" media="screen" href="/srizzato/css/style.css">
+    <link rel="stylesheet" media="print" href="/srizzato/css/print.css">
+    <noscript>
+        <link rel="stylesheet" media="screen" href="/srizzato/css/noscript.css">
+    </noscript>
+    <script src="/srizzato/js/script.js"></script>
+    <link rel="shortcut icon" type="image/png" href="/srizzato/img/utils/logo.png">
+    <title>Menu' - Fuji Sushi</title>
+    <page-name>Menù</page-name>
+</head>
+
+<body onload="start()">
+    <page-header />
+    <main id="content">
+        <section class="section-block vertical">
+            <h1 class="section-title">il nostro menù</h1>
+            <div class="section-content menu vertical">
+                <div id="menu-container">
+                    <div id="menu-side-panel">
+                        <form method="get" action="menu.php" class="formFilter">
+                            <fieldset>
+                                <legend class="title">Categorie</legend>
+                                <ul class="filter">
+
+                                    <category-list />
+                                </ul>
+                            </fieldset>
+                        </form>
+                        <form id="form_replace_cart" method="post" action="menu.php" class="container-cart ns-hide">
+                            <fieldset>
+                                <legend>Il tuo carrello</legend>
+                                <span class="notSaved hidden">(non è salvato)</span>
+                                <span class="empty">
+                                    Il tuo carello è vuoto
+                                </span>
+                                <ul class="cart-dishes">
+                                    <cart-items />
+                                </ul>
+                                <button type="button" class="removeAll" onclick="removeAllCart()">Svuota
+                                    carrello</button>
+                                <input type="submit" name="submit_replace_cart" id="salva" onclick="saved()"
+                                    class="checkout hidden" value="Salva" />
+                                <a class="checkout hidden" href="carrello.php">Vai al carrello</a>
+                            </fieldset>
+                        </form>
+
+                    </div>
+                    <ul id="dish-container">
+                        <dish-list />
+                    </ul>
+                </div>
+                <button class="hamburger-cart" onclick="cartToggle()">
+                    <img src="/srizzato/img/utils/cart.png" alt="visualizza o nascondi carrello">
+                </button>
+            </div>
+        </section>
+    </main>
+    <div id="go-top">
+        <a href="#content">
+            <img src="/srizzato/img/utils/up.png" alt="torna in cima alla pagina">
+        </a>
+    </div>
+    <footer>
+        <div class="foot-content">
+            <p class="foot-title">Contatti</p>
+            <ul>
+                <li><address>Via Trieste 63, Padova</address></li>
+                <li><a class="mail-link" href="mailto:tecweb.2021@gmail.com">tecweb.2021@gmail.com</a></li>
+                <li><a class="tel" href="tel:+042566888899">0425 6688 8899</a></li>
+                <li>Siamo aperti 24/7</li>
+            </ul>
+        </div>
+        <div class="foot-content">
+            <p class="foot-title">tecnologie utilizzate</p>
+            <ul>
+                <li>XHTML5</li>
+                <li>CSS3</li>
+                <li>ES2015</li>
+                <li>PHP7</li>
+                <li>MySQL</li>
+            </ul>
+        </div>
+        <div class="foot-content">
+            <p class="foot-title">proprietari</p>
+            <ul>
+                <li>Rizzato Samuele</li>
+                <li>Stafa Diego</li>
+                <li>Wu Luciano</li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

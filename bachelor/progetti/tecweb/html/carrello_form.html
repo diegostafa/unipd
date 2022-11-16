@@ -1,0 +1,38 @@
+<hr>
+<section class="section-block">
+    <h2 class="section-title">Completa l'ordine</h2>
+    <div class="section-content">
+        <form id="form_add_order" action="carrello.php" method="get" onsubmit="return confirmOrder();">
+            <fieldset>
+                <legend>dettagli consegna</legend>
+                <ul>
+                    <li>
+                        <input type="radio" name="delivery" id="take" value="take" checked />
+                        <label lang="en" for="take">Take away</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="delivery" id="domicilio" value="domicile" />
+                        <label for="domicilio">Consegna a domicilio</label>
+                    </li>
+                </ul>
+                <div>
+                    <label for="address">Luogo</label>
+                    <input type="text" name="place" id="address" placeholder="es. Via Trieste 63"
+                    pattern="^[a-zA-Z0-9\s']{2,}$" value="Via Trieste 63" required />
+                    <place />
+                </div>
+                <div>
+                    <label for="data">Data di consegna:</label>
+                    <input type="date" id="data" name="date" required />
+                </div>
+                <div>
+                    <label for="schedule">Orario di consegna:</label>
+                    <input type="time" name="schedule" id="schedule" />
+                    <date />
+                </div>
+            </fieldset>
+            <input type="reset" value="Ripristina" />
+            <input type="submit" name="submit_add_order" value="Conferma" />
+        </form>
+    </div>
+</section>

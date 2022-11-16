@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8" />
+    <page-name>Registrati</page-name>
+    <title>Registrati - Fuji Sushi</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="description" content="pagina per effettuare la registrazione al sito Fuji sushi" />
+    <meta name="keywords" content="Registrazione, profilo, username, password, sushi, ristorante, giapponese" />
+    <meta name="author" content="Rizzato Samuele, Stafa Diego, Wu Luciano" />
+    <link rel="stylesheet" media="screen" href="/srizzato/css/style.css">
+    <link rel="stylesheet" media="print" href="/srizzato/css/print.css">
+    <noscript>
+        <link rel="stylesheet" media="screen" href="/srizzato/css/noscript.css">
+    </noscript>
+    <script src="/srizzato/js/script.js"></script>
+    <link rel="shortcut icon" type="image/png" href="/srizzato/img/utils/logo.png">
+</head>
+
+<body>
+    <page-header />
+
+    <main id="content">
+        <section class="section-block">
+            <h1 class="section-title">crea un nuovo profilo</h1>
+            <general-error />
+            <div class="section-content">
+                <form id="form_signup" action="/srizzato/php/registrazione.php" method="post">
+                    <fieldset>
+                        <legend>profilo utente</legend>
+                        <div>
+                            <label for="first_name">Nome</label>
+                            <input type="text" name="first_name" id="first_name" placeholder="il tuo nome"
+                                value="<first-name />" pattern="^[A-Za-zàèìòùé\s']{1,50}$" maxlength="50"
+                                title="sono consentite lettere, spazi, apostrofi e massimo 50 caratteri" required />
+                            <first-name-message />
+                        </div>
+
+                        <div>
+                            <label for="last_name">Cognome</label>
+                            <input type="text" name="last_name" id="last_name" placeholder="il tuo cognome"
+                                value="<last-name />" pattern="^[A-Za-zàèìòùé\s']{1,50}$" maxlength="50"
+                                title="sono consentite lettere, spazi, apostrofi e massimo 50 caratteri" required />
+                            <last-name-message />
+                        </div>
+
+                        <div>
+                            <label for="username" lang="en">Username</label>
+                            <input type="text" name="username" id="username"
+                                placeholder="sono consentite lettere, numeri e al massimo 50 caratteri"
+                                value="<username />" pattern="^[A-Za-zàèìòùé0-9]{1,50}$" maxlength="50"
+                                title="sono consentite lettere, numeri e al massimo 50 caratteri" required />
+                            <username-message />
+                        </div>
+
+                        <div>
+                            <p>Lo username inserito non potrà essere modificato successivamente</p>
+                        </div>
+
+                        <div>
+                            <label for="email" lang="en">Email</label>
+                            <input type="email" name="email" id="email" placeholder="mario@sushi.com" value="<email />"
+                                maxlength="140"
+                                pattern="^[\w\-\+\.%_!\/#\${}]{1,64}@[a-zA-Z]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.[a-zA-Z]([a-zA-Z0-9\-\.\+]+)$"
+                                title="inserire un'email valida" required />
+                            <email-message />
+                        </div>
+
+                        <div>
+                            <label for="password" lang="en">Password</label>
+                            <input type="password" name="password" id="password" maxlength="20"
+                                placeholder="la password deve essere di almeno 4 caratteri" value="<password />"
+                                pattern="^.{4,20}$" title="la password deve essere di almeno 4 caratteri" required />
+                            <password-message />
+                        </div>
+
+                        <div>
+                            <label for="confirm_password">Conferma <span lang="en">password</span></label>
+                            <input type="password" name="confirm_password" id="confirm_password" maxlength="20"
+                                value="<confirm-password />" placeholder="conferma la password inserita precedentemente"
+                                pattern="^.{4,20}$" title="confermare la password inserita in precedenza" required />
+                            <confirm-password-message />
+                        </div>
+                    </fieldset>
+                    <input type="reset" value="Ripristina" />
+                    <input type="submit" name="submit_signup" value="Registrati" />
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="go-top">
+        <a href="#content">
+            <img src="/srizzato/img/utils/up.png" alt="torna in cima alla pagina">
+        </a>
+    </div>
+    <footer>
+        <div class="foot-content">
+            <p class="foot-title">Contatti</p>
+            <ul>
+                <li><address>Via Trieste 63, Padova</address></li>
+                <li><a class="mail-link" href="mailto:tecweb.2021@gmail.com">tecweb.2021@gmail.com</a></li>
+                <li><a class="tel" href="tel:+042566888899">0425 6688 8899</a></li>
+                <li>Siamo aperti 24/7</li>
+            </ul>
+        </div>
+        <div class="foot-content">
+            <p class="foot-title">tecnologie utilizzate</p>
+            <ul>
+                <li>XHTML5</li>
+                <li>CSS3</li>
+                <li>ES2015</li>
+                <li>PHP7</li>
+                <li>MySQL</li>
+            </ul>
+        </div>
+        <div class="foot-content">
+            <p class="foot-title">proprietari</p>
+            <ul>
+                <li>Rizzato Samuele</li>
+                <li>Stafa Diego</li>
+                <li>Wu Luciano</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

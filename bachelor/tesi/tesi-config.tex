@@ -1,0 +1,236 @@
+\newcommand{\myName}{Diego Stafa}                                    
+\newcommand{\myTitle}{Applicazione \textit{mobile} per la gestione di tour cicloturistici}
+\newcommand{\myDegree}{Tesi di laurea}
+\newcommand{\myUni}{Università degli Studi di Padova}
+\newcommand{\myFaculty}{Corso di Laurea in Informatica}
+\newcommand{\myDepartment}{Dipartimento di Matematica "Tullio Levi-Civita"}
+\newcommand{\profTitle}{Prof.}
+\newcommand{\myProf}{Davide Bresolin}
+\newcommand{\myLocation}{Padova}
+\newcommand{\myAA}{2021-2022}
+\newcommand{\myTime}{Luglio 2022}
+
+
+\newcounter{uccod}
+\newcommand{\declucsectioncmd}[3]{
+    \newcounter{#2}
+    \newcommand{#1}[1]{
+        \stepcounter{#2}%
+		\renewcommand{\theuccod}{UC #3}%
+		\refstepcounter{uccod}%
+        \subsubsection*{\theuccod\ - ##1}
+        \addcontentsline{toc}{subsubsection}{\theuccod\ - ##1}
+    }
+}
+\newcommand{\declsubucsectioncmd}[4]{
+    \declucsectioncmd{#1}{#2}{#3}
+    \counterwithin{#2}{#4}
+}
+
+\declucsectioncmd{\uc}{uc}{\theuc}
+\declsubucsectioncmd{\subuc}{subuc}{\thesubuc}{uc}
+\declsubucsectioncmd{\subsubuc}{subsubuc}{\thesubsubuc}{subuc}
+\declsubucsectioncmd{\subsubsubuc}{subsubsubuc}{\thesubsubsubuc}{subsubuc}
+
+\newcounter{reqcod}
+\newcommand{\declreqcmd}[3]{
+    \newcounter{#2}
+    \newcommand{#1}[1]{
+		\stepcounter{#2}%
+        \renewcommand{\thereqcod}{R{##1}#3}%
+        \refstepcounter{reqcod}%
+		\thereqcod
+    }
+}
+\newcommand{\declsubreqcmd}[4]{
+    \declreqcmd{#1}{#2}{#3}
+    \counterwithin{#2}{#4}
+}
+
+\declreqcmd{\req}{req}{\thereq}
+\declsubreqcmd{\subreq}{subreq}{\thesubreq}{req}
+\declsubreqcmd{\subsubreq}{subsubreq}{\thesubsubreq}{subreq}
+\declsubreqcmd{\subsubsubreq}{subsubsubreq}{\thesubsubsubreq}{subsubreq}
+
+% Impostazioni di impaginazione
+\setlength{\parindent}{14pt}   % larghezza rientro della prima riga
+\setlength{\parskip}{0pt}   % distanza tra i paragrafi
+
+% Impostazioni di biblatex
+\bibliography{bibliografia} % database di biblatex 
+
+\defbibheading{bibliography} {
+    \cleardoublepage
+    \phantomsection 
+    \addcontentsline{toc}{chapter}{\bibname}
+    \chapter*{\bibname\markboth{\bibname}{\bibname}}
+}
+
+\setlength\bibitemsep{1.5\itemsep} % spazio tra entry
+
+\DeclareBibliographyCategory{opere}
+\DeclareBibliographyCategory{web}
+
+\addtocategory{opere}{womak:lean-thinking}
+\addtocategory{web}{site:agile-manifesto}
+
+\defbibheading{opere}{\section*{Riferimenti bibliografici}}
+\defbibheading{web}{\section*{Siti Web consultati}}
+
+
+% Impostazioni di caption
+\captionsetup{
+    tableposition=top,
+    figureposition=bottom,
+    font=small,
+    format=hang,
+    labelfont=bf
+}
+
+% Impostazioni di glossaries
+\makeglossaries
+\input{glossario}
+
+
+% Impostazioni di graphicx
+\graphicspath{{immagini/}} % cartella dove sono riposte le immagini
+
+
+% Impostazioni di hyperref
+\hypersetup{
+    %hyperfootnotes=false,
+    %pdfpagelabels,
+    %draft,	% = elimina tutti i link (utile per stampe in bianco e nero)
+    colorlinks=true,
+    linktocpage=true,
+    pdfstartpage=1,
+    pdfstartview=,
+    % decommenta la riga seguente per avere link in nero (per esempio per la stampa in bianco e nero)
+    %colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=1, pdfstartview=FitV,
+    breaklinks=true,
+    pdfpagemode=UseNone,
+    pageanchor=true,
+    pdfpagemode=UseOutlines,
+    plainpages=false,
+    bookmarksnumbered,
+    bookmarksopen=true,
+    bookmarksopenlevel=1,
+    hypertexnames=true,
+    pdfhighlight=/O,
+    %nesting=true,
+    %frenchlinks,
+    urlcolor=webbrown,
+    linkcolor=RoyalBlue,
+    citecolor=webgreen,
+    %pagecolor=RoyalBlue,
+    %urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,
+    pdftitle={\myTitle},
+    pdfauthor={\textcopyright\ \myName, \myUni, \myFaculty},
+    pdfsubject={},
+    pdfkeywords={},
+    pdfcreator={pdfLaTeX},
+    pdfproducer={LaTeX}
+}
+
+%\renewcommand{\labelitemi}{$\bullet$}
+%\renewcommand{\labelitemii}{$\cdot$}
+%\renewcommand{\labelitemiii}{$\diamond$}
+%\renewcommand{\labelitemiv}{$\ast$}
+
+
+% Impostazioni di listings
+\lstset{
+    language=[LaTeX]Tex,%C++,
+    keywordstyle=\color{RoyalBlue}, %\bfseries,
+    basicstyle=\small\ttfamily,
+    %identifierstyle=\color{NavyBlue},
+    commentstyle=\color{Green}\ttfamily,
+    stringstyle=\rmfamily,
+    numbers=none, %left,%
+    numberstyle=\scriptsize, %\tiny
+    stepnumber=5,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frameround=ftff,
+    frame=single
+} 
+
+
+% Impostazioni di xcolor
+\definecolor{webgreen}{rgb}{0,.5,0}
+\definecolor{webbrown}{rgb}{.6,0,0}
+
+
+% Altro
+\newcommand{\omissis}{[\dots\negthinspace]}
+
+% eccezioni all'algoritmo di sillabazione
+\hyphenation
+{
+    ma-cro-istru-zio-ne
+    gi-ral-din
+}
+
+\newcommand{\sectionname}{sezione}
+\addto\captionsitalian{\renewcommand{\figurename}{Figura}
+                       \renewcommand{\tablename}{Tabella}}
+
+\newcommand{\glsfirstoccur}{\ap{{[g]}}}
+
+\newcommand{\intro}[1]{\emph{\textsf{#1}}}
+
+% Environment per ``rischi''
+\newcounter{riskcounter}
+\setcounter{riskcounter}{0}
+
+%%%% Parameters
+% #1: Title
+\newenvironment{risk}[1]{
+    \refstepcounter{riskcounter}
+    \par \noindent
+    \textbf{\arabic{riskcounter}. #1}
+}{
+    \par\medskip
+}
+
+\newcommand{\riskname}{Rischio}
+\newcommand{\riskdescription}[1]{\textbf{\\Descrizione:} #1.}
+\newcommand{\risksolution}[1]{\textbf{\\Soluzione:} #1.}
+
+% Environment per ``use case''
+\newcounter{usecasecounter}
+\setcounter{usecasecounter}{0}
+
+%%%% Parameters
+% #1: ID
+% #2: Nome
+\newenvironment{usecase}[2]{
+    \renewcommand{\theusecasecounter}{\usecasename #1} 
+    \refstepcounter{usecasecounter}
+    \vspace{10pt}
+    \par \noindent
+    {\large \textbf{\usecasename #1: #2}}
+    \medskip
+}{
+    \medskip
+}
+
+\newcommand{\usecasename}{UC}
+\newcommand{\usecaseactors}[1]{\textbf{\\Attori Principali:} #1. \vspace{4pt}}
+\newcommand{\usecasepre}[1]{\textbf{\\Precondizioni:} #1. \vspace{4pt}}
+\newcommand{\usecasedesc}[1]{\textbf{\\Descrizione:} #1. \vspace{4pt}}
+\newcommand{\usecasepost}[1]{\textbf{\\Postcondizioni:} #1. \vspace{4pt}}
+\newcommand{\usecasealt}[1]{\textbf{\\Scenario Alternativo:} #1. \vspace{4pt}}
+
+% Environment per ``namespace description''
+\newenvironment{namespacedesc}{
+    \vspace{10pt}
+    \par \noindent                              % start new paragraph
+    \begin{description} 
+}{
+    \end{description}
+    \medskip
+}
+
+\newcommand{\classdesc}[2]{\item[\textbf{#1:}] #2}

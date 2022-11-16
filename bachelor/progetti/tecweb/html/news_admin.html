@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gestione news - Fuji Sushi</title>
+    <page-name>Gestione <span lang="en">news</span></page-name>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="description" content="Modifica e aggiungi notizie di Fuji sushi">
+    <meta name="keywords" content=" notizie, news,eventi, Fuji sushi, sushi">
+    <meta name="author" content="Rizzato Samuele, Stafa Diego, Wu Luciano">
+    <link rel="stylesheet" media="screen" href="/srizzato/css/style.css">
+    <link rel="stylesheet" media="print" href="/srizzato/css/print.css">
+    <noscript>
+        <link rel="stylesheet" media="screen" href="/srizzato/css/noscript.css">
+    </noscript>
+    <script src="/srizzato/js/script.js"></script>
+    <link rel="shortcut icon" type="image/png" href="/srizzato/img/utils/logo.png">
+</head>
+
+<body>
+    <page-header />
+    <main id="content">
+        <section class="section-block">
+            <h1 class="section-title">Inserisci una news</h1>
+            <div class="section-content">
+                <form id="form_add_news" name="news_form" class="form-input" action="news_admin.php" method="post"
+                    enctype="multipart/form-data">
+                    <fieldset>
+                        <legend>dati per la news</legend>
+                        <div>
+                            <label for="news_title">Titolo</label>
+                            <input type="text" id="news_title" name="news_title" placeholder="Titolo della notizia"
+                                required pattern="^[A-Za-zàèìòùé0-9\s']{1,50}$" />
+                        </div>
+                        <div>
+                            <label for="news_desc">Contenuto</label>
+                            <textarea cols="100" rows="10" id="news_desc" name="news_desc"
+                                placeholder="Contenuto della notizia" required></textarea>
+                        </div>
+                        <div>
+                            <label for="img_file">Immagine della news</label>
+                            <input type="file" name="img_file" id="img_file" required />
+                        </div>
+                        <div>
+                            <label for="img_alt">Descrizione dell'immagine</label>
+                            <input type="text" id="img_alt" name="img_alt" placeholder="Descrivi l'immagine caricata"
+                                required pattern="^[A-Za-zàèìòùé0-9\s']{1,100}$" />
+                        </div>
+                    </fieldset>
+                    <input type="reset" value="Ripristina" />
+                    <input type="submit" name="submit_add_news" value="Aggiungi" />
+                </form>
+            </div>
+        </section>
+        <hr>
+        <section id="news-section" class="section-block">
+            <h1 class="section-title">elimina delle news</h1>
+            <div id="news-section-content" class="section-content">
+                <form id="form_delete_news" action="/srizzato/php/news_admin.php" method="post">
+                    <fieldset>
+                        <legend>Seleziona le news da eliminare</legend>
+                        <news-list />
+                    </fieldset>
+                    <input type="reset" value="Ripristina" />
+                    <input type="submit" name="submit_remove_news" value="Elimina" />
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <div id="go-top">
+        <a href="#content">
+            <img src="/srizzato/img/utils/up.png" alt="torna in cima alla pagina">
+        </a>
+    </div>
+    <footer>
+        <div class="foot-content">
+            <p class="foot-title">Contatti</p>
+            <ul>
+                <li><address>Via Trieste 63, Padova</address></li>
+                <li><a class="mail-link" href="mailto:tecweb.2021@gmail.com">tecweb.2021@gmail.com</a></li>
+                <li><a class="tel" href="tel:+042566888899">0425 6688 8899</a></li>
+                <li>Siamo aperti 24/7</li>
+            </ul>
+        </div>
+        <div class="foot-content">
+            <p class="foot-title">tecnologie utilizzate</p>
+            <ul>
+                <li>XHTML5</li>
+                <li>CSS3</li>
+                <li>ES2015</li>
+                <li>PHP7</li>
+                <li>MySQL</li>
+            </ul>
+        </div>
+        <div class="foot-content">
+            <p class="foot-title">proprietari</p>
+            <ul>
+                <li>Rizzato Samuele</li>
+                <li>Stafa Diego</li>
+                <li>Wu Luciano</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

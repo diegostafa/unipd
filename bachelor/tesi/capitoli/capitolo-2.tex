@@ -1,0 +1,124 @@
+% !TEX encoding = UTF-8
+% !TEX TS-program = pdflatex
+% !TEX root = ../tesi.tex
+
+\chapter{Processi e metodologie}
+\label{cap:cap2}
+
+\intro{In questo capitolo vengolo illustrati i processi di sviluppo e gli strumenti adottati per affrontare il progetto.}\\
+
+\section{Processi aziendali}
+\subsection{Metodologia Agile}
+Il \textit{team} di Moku lavora utilizzando metodologie \textit{Agile}, basate su \textit{SCRUM}. Il \gls{frameworkg} \textit{SCRUM} prevede l'impegno di tre regole per la gestione dei processi\footcite{site:scrum-doc}:
+\begin{itemize}
+    \item \textbf{trasparenza}: gli aspetti significativi del processo devono essere visibili ai responsabili del lavoro, in un linguaggio formale; 
+    \item \textbf{ispezione}: i responsabili del lavoro devono poter ispezionare frequentemente, e in modo non invasivo, gli artefatti prodotti, al fine di rilevare anticipatamente eventuali anomalie; 
+    \item \textbf{adattamento}: la rilevazione di una anomalia deve essere corretta il più velocemente possibile, riducendo al minimo lo spreco di risorse.
+\end{itemize}
+Durante il tirocinio ho applicato concretamente i concetti \textit{SCRUM}, lavorando a stretto contatto con il cliente e  partecipando a incontri settimanali di \gls{sprintreviewg} e \gls{sprintplanningg} con il \textit{project manager}. Nelle \textit{sprint review} veniva descritto e discusso il lavoro svolto nello \textit{sprint} appena terminato, mentre nei \textit{sprint planning} si andavano a pianificare le attività per lo \gls{sprintg} a venire. Unito a ciò, per il progetto ci siamo serviti delle \textit{board kanban} per formalizzare l'avanzamento dei processi.L'adozione di queste pratiche ci ha permesso di perseguire i principi di trasparenza, ispezione e adattamento \textit{SCRUM}. Infine, Oltre al \textit{framework SCRUM} è stata applicata la pratica del rilascio incrementale di versioni intermedie del prodotto, al fine di ricevere riscontri anche dal cliente.
+
+\section{Strumenti utilizzati}
+Di seguito vengono elencati gli strumenti coinvolti nel periodo di tirocinio, descrivendo brevemente il ruolo da loro coperto.
+
+\subsection{Strumenti organizzativi}
+\subsubsection{Slack} \textit{Slack} è un'applicazione di messagistica che consente di creare diversi \gls{serverg} e canali di comunicazione suddivisi per argomento, mantenendo una separazione intuitiva tra le discussioni. Durante il tirocinio ci siamo avvalsi di due \textit{server} di discussione, il primo per le comunicazioni interne dell'azienda, il secondo per le comunicazioni con il cliente.
+
+\subsubsection{Jira} è una \textit{suite} di strumenti \textit{software} di \textit{Issue Tracking System} ormai diventato uno \textit{standard} nel settore informatico, grazie soprattutto alle numerose funzionalità offerte. \textit{Jira} consente di tracciare attività, assegnarle e indicarne la tipologia. Il \textit{software} è inoltre particolarmente adatto per l'azienda e la sua metodologia di sviluppo, fornendo \textit{board} preconfigurate per l'attuazione di strategie \textit{agili} - \textit{SCRUM}. 
+
+\subsubsection{Trello} \textit{Trello} è uno strumento \textit{web} basato sul modello \textit{kanban} per la gestione di progetti. Durante il tirocinio \textit{Trello} è stato sfruttato sia per tracciare le attività stabilite, sia per fornire al cliente un riscontro visivo sullo stato del progetto.
+
+
+\subsubsection{Google Meet} \textit{Google Meet} è un semplice servizio di comunicazione video. Durante il tirocinio \textit{Google Meet} è stato sfruttato sia per gli incontri periodici con il cliente, sia per le comunicazioni interne del \textit{team} nel caso in cui non ci fosse la disponibilità fisica.
+
+\subsection{Strumenti di sviluppo}
+
+\subsubsection{Git} è un \textit{software} di controllo di versione distribuito, volto ad agevolare il coordinamento tra più persone che lavorano su un stesso insieme di file. Durante il tirocinio \textit{git} è stato sfruttato per il versionamento dei sorgenti in locale.
+
+\subsubsection{BitBucket} \textit{Bitbucket} è un servizio \textit{cloud} di \textit{hosting} per progetti basati sui \textit{VCS} \textit{mercurial} o \textit{git}. Essendo \textit{Moku} un'azienda che sfrutta estensivamente il servizio da molti anni, per il progetto è stato utilizzato \textit{Bitbucket}.
+
+\subsubsection{Github} \textit{Github} è un servizio \textit{cloud} di \textit{hosting} per progetti basati su \textit{git}. Durante il progetto è stato utilizzato per sincronizzare i sorgenti con il \textit{repository} il cliente.
+
+\subsubsection{VScode} \textit{VScode} è un editor di testo estremamente estensibile che offre molte utili funzioni, tra cui: \textit{debugging}, \textit{syntax highlighting} e autocompletamento. Per il progetto è stato scelto \textit{VScode} in quanto presenta delle utili estensioni per lo sviluppo in \gls{flutterg}.
+
+\section{Tecnologie utilizzate}
+Lo scopo di questa sezione è elencare e descrivere le tecnologie utilizzate nello sviluppo del progetto, illustrando anche i loro vantaggi e svantaggi.
+
+\subsection{Dart} \textit{Dart} è un linguaggio fortemente tipizzato basato sul paradigma a oggetti e sviluppato da Google nel 2011. Il linguaggio prende forte ispirazione da altri famosi linguaggi, come \textit{Java} e \textit{Javascript}, ma riesce a distinguersi grazie alle molte comodità che il linguaggio offre. \\
+\noindent \textbf{Vantaggi}:
+\begin{itemize}
+    \item ha una sintassi molto semplice;
+    \item il gestore dei pacchetti, \textit{pub};
+    \item la \gls{soundg};
+    \item la possibilità di \textit{transcompilare} su diverse piattaforme;
+    \item una \textit{community} molto attiva.
+\end{itemize}
+\noindent \textbf{Svantaggi}:
+\begin{itemize}
+    \item rispetto ad altri linguaggi ormai affermati, \textit{Dart} presenta un ristretto ecosistema di librerie.
+\end{itemize}
+\noindent L'utilizzo di \textit{Dart} è stato rispettato come espresso nei vincoli.
+
+\subsection{Flutter} Flutter è un \textit{framework} grafico per la creazione di interfacce grafiche multipiattaforma, rilasciato da \textit{Google} nel 2017.\\
+\noindent \textbf{Vantaggi}:
+\begin{itemize}
+    \item permette di sviluppare applicazioni multipiattaforma;
+    \item \gls{hotreloadg}.
+\end{itemize}
+\noindent \textbf{Svantaggi}:
+\begin{itemize}
+    \item le applicazioni \textit{Flutter} hanno prestazioni generalmente peggiori rispetto alle controparti native.
+\end{itemize}
+\noindent L'utilizzo di \textit{Flutter} è stato rispettato come espresso nei vincoli.
+
+\subsection{Sqlite}
+\textit{Sqlite} è un database relazionale compatibile con \gls{sqlg}. A differenza di altri sistemi basati su SQL come \textit{MySQL} e \textit{PostgreSQL}, \textit{SQLite} non utilizza un'architettura \textit{clientserverg}. L'intero programma è contenuto in una libreria, che è integrata nelle applicazioni \footcite{site:sqlite-doc}.\\
+\noindent \textbf{Vantaggi}:
+\begin{itemize}
+    \item offre prestazioni e tempi di risposta molto buone;
+    \item può interpretare campi \gls{jsong};
+    \item è semplice.
+\end{itemize}
+\noindent \textbf{Svantaggi}:
+\begin{itemize}
+    \item non supporta le viste;
+    \item non supporta la concorrenza.
+\end{itemize}
+
+\subsection{JSON} \textit{JSON} è il formato dati scelto per lo scambio di dati fra l'applicazione e il \textit{back-end}.
+\noindent L'utilizzo di \textit{JSON} è stato rispettato come espresso nei vincoli.
+
+\subsection{Libreria bloc\_flutter}
+\textit{bloc\_flutter} è una libreria che permette di implementare facilmente il \textit{pattern} \gls{bloc} in applicazioni \textit{flutter}.
+\noindent \textbf{Vantaggi}:
+\begin{itemize}
+    \item offre un'elevata robustezza e scalabilità;
+    \item nasconde i dettagli implementativi del \textit{pattern} fornendo un'\gls{apig} semplice.
+\end{itemize}
+
+\subsection{Libreria google\_maps\_flutter}
+Per la visualizzazione delle mappe per il progetto è stato deciso l'utilizzo della libreria \textit{google\_maps\_flutter}. Altre librerie, come \textit{flutter\_map} o \textit{mapbox}, sono state scartate dopo un'attenta analisi.\\
+\noindent \textbf{Vantaggi}:
+\begin{itemize}
+    \item la documentazione e la \textit{community} sono molto ampie;
+    \item permette di implementare il raggruppamento dinamico di più punti nella mappa\footcite{site:clustering-doc}.
+\end{itemize}
+
+\newpage
+
+\section{Cenni teorici su Flutter e BLoC}\label{lb:cenni-bloc}
+
+Si può definire un'applicazione \textit{Flutter} come un'insieme di schermate. Una schermata è un elemento formato da uno o più \textit{widget}, i quali rappresentano gli elementi visivi e grafici che vanno a comporre l'applicazione \footcite{site:flutter-doc}, i \textit{widget} sono rappresentati nel \textit{framework} come delle semplici classi. Un widget può essere principalmente di due tipi:
+\begin{itemize}
+    \item \textbf{Stateless}: nel caso in cui non mantenga uno stato interno;
+    \item \textbf{Stateful}: nel caso in cui mantenga uno stato interno.
+\end{itemize}
+\textit{Flutter} non impone una determinata architettura per la costruzione delle schermate, ma affida allo sviluppatore il compito di ciò, andando però a suggerire diversi \textit{pattern} e tra questi il più famoso è il \textit{BLoC}.
+In \textit{Flutter} il \textit{BLoC pattern} si basa sul concetto di \textit{business logic component}, cioè un elemento che emette stati e riceve eventi di una schermata \footcite{site:bloc-doc}. In generale la funzione di un \textit{bloc} è quella di gestire lo stato e gli eventi di un elemento, separando quindi il lato strutturale di una schermata da quello comportamentale.
+La figura \ref{fig:pattern-bloc} illustra il normale processo di comunicazione per le applicazioni \textit{flutter} basate sul \textit{pattern bloc}.   
+
+\begin{figure}[!h] 
+    \centering 
+    \includegraphics[width=0.8\columnwidth]{img/progettazione/bloc.png} 
+    \caption{Rappresentazione del \textit{pattern bloc}.}
+    \label{fig:pattern-bloc}
+\end{figure}

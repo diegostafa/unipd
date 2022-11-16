@@ -1,0 +1,3 @@
+DirectoryIndex /srizzato/php/home.php
+ErrorDocument 404 /srizzato/php/errore404.php
+ErrorDocument 500 /srizzato/php/errore500.php

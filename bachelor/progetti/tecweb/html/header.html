@@ -1,0 +1,80 @@
+<header>
+    <div id="top-header">
+        <nav class="top-nav">
+            <ul>
+                <li>
+                    <a href="/srizzato/php/home.php" lang="en">home</a>
+                </li>
+                <li>
+                    <a href="/srizzato/php/menu.php">menù</a>
+                </li>
+                <li>
+                    <a href="/srizzato/php/news.php" lang="en">news</a>
+                </li>
+                <li>
+                    <a href="/srizzato/php/contatti.php">contatti</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="logo">
+            <a href="/srizzato/php/home.php">
+                <img src="/srizzato/img/utils/logo.png" alt="Fuji Sushi" />
+            </a>
+        </div>
+        <noscript>
+            <div id="ns-menu">
+                <nav class="top-nav ns-menu">
+                    <ul>
+                        <li>
+                            <a href="/srizzato/php/home.php" lang="en">home</a>
+                        </li>
+                        <li>
+                            <a href="p_path/php/menu.php">menù</a>
+                        </li>
+                        <li>
+                            <a href="/srizzato/php/news.php" lang="en">news</a>
+                        </li>
+                        <li>
+                            <a href="/srizzato/php/contatti.php">contatti</a>
+                        </li>
+                    </ul>
+                    <login-links />
+                </nav>
+            </div>
+        </noscript>
+        <nav id="user-action" class="top-nav">
+            <login-links />
+        </nav>
+
+        <button id="show-overlay-btn" class="ns-hide" onclick="openOverlay()">
+            <img src="/srizzato/img/utils/menu.png" alt="Menu di navigazione" />
+        </button>
+        <div id="overlay">
+            <div id="overlay-content">
+                <button id="close-overlay-btn" onclick="closeOverlay()">chiudi</button>
+                <ul>
+                    <li>
+                        <a href="/srizzato/php/home.php" lang="en">home</a>
+                    </li>
+                    <li>
+                        <a href="/srizzato/php/menu.php">menù</a>
+                    </li>
+                    <li>
+                        <a href="/srizzato/php/news.php" lang="en">news</a>
+                    </li>
+                    <li>
+                        <a href="/srizzato/php/contatti.php">contatti</a>
+                    </li>
+                </ul>
+                <login-links />
+            </div>
+        </div>
+    </div>
+
+    <nav id="breadcrumb" aria-label="breadcrumb">
+        <span id="site-path">Ti trovi in:
+            <breadcrumb />
+        </span>
+        <a id="go-content" href="#content" tabindex="1">Vai al contenuto</a>
+    </nav>
+</header>

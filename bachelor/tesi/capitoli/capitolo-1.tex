@@ -1,0 +1,89 @@
+% !TEX encoding = UTF-8
+% !TEX TS-program = pdflatex
+% !TEX root = ../tesi.tex
+
+
+\chapter{Introduzione}
+\label{cap:cap1}
+
+\intro{In questo capitolo viene introdotto il contesto aziendale del tirocinio, fornendo una breve paronamica sull'azienda e la sua storia. Vengono infine introdotti il progetto proposto, le sue caratteristiche e gli obiettivi prefissati.}\\
+
+\section{L'azienda}
+
+\subsection{Descrizione}
+
+\begin{figure}[!ht] 
+    \centering 
+    \includegraphics[width=0.5\columnwidth]{img/azienda/logo.png} 
+    \caption{Il logo di Moku S.r.l.}
+\end{figure}
+
+\noindent Moku S.r.l. è un'azienda nata in provincia di Treviso nel 2013, sotto l'incubatrice \textit{H-Farm}. Negli anni Moku si è affermata come azienda di consulenza e sviluppo di \textit{software} su commissione, toccando svariati ambiti, tra cui: la biomedicina, la domotica, il turismo e la logistica. L'azienda è fortemente caratterizzata da una metodologia di lavoro \gls{agileg} e flessibile, a stretto contatto con il cliente, sia questo una piccola \textit{start-up} o una grande impresa.
+
+\subsection{Organizzazione interna}
+
+Dal 2013 Moku ha subito una forte evoluzione interna, se agli inizi la piccola \textit{start-up} si componeva di una manciata di persone, oggi conta invece di un \textit{team} di oltre venti unità, i cui ruoli aziendali si dividono nel seguente modo:
+\begin{itemize}
+\item \textbf{CEO}: gestisce le relazioni con i clienti e gli investitori, ricopre la figura amministrativa dell'azienda;
+\item \textbf{CTO}: monitora, valuta e seleziona le tecnologie che possono essere applicate ai prodotti o ai servizi dell'azienda;
+\item \textbf{CFO}: gestisce la pianificazione e le attività finanziarie dell'azienda. Svolge anche il ruolo di archiviazione della documentazione;
+\item \textbf{project manager}: gestisce uno o più progetti, supervisionando e definendo i processi di sviluppo e mantenendo un contatto con il cliente;
+\item \textbf{analista}: si occupa di definire i requisiti di progetto, formalizzando le richieste del cliente attraverso dei requisiti ben definiti;
+\item \textbf{progettista}: prendendo in considerazione il lavoro degli analisti, si occupa di definire l'architettura del sistema in questione, indicandone le componenti e le loro specifiche;
+\item \textbf{sviluppatore}: si occupa dello sviluppo effettivo del prodotto, seguendo le specifiche dettate dai progettisti. All'interno dell'azienda la figura dello sviluppatore viene a sua volta divisa per aree di sviluppo, quali: \gls{backendg}, \gls{frontendg} e \textit{mobile};
+\item \textbf{designer}: si occupa di progettare e definire l'interfaccia' dei prodotti.
+\end{itemize}
+
+\noindent Durante il tirocinio ho avuto modo di ricoprire la figura di analista, progettista e sviluppatore e collaborare con Alessio Trevisan, il mio \textit{project manager}. 
+
+\section{Il tirocinio}
+
+\subsection{Il progetto proposto}
+Moku sta sviluppando per conto di una \textit{start-up} il progetto \textit{CyclingHero}: un prototipo di applicazione \textit{mobile} per la gestione di \textit{tour} cicloturistici. Le funzioni chiave dell'applicazione riguardano il monitoraggio di un \textit{tour} e la condivisione delle posizioni dei partecipanti a tale evento. Dato un \gls{tourg} si vuole avere la possibilità di visualizzarne in dettaglio le caratteristiche associate, quindi: le giornate che lo compongono, i percorsi scelti per ogni giornata, lo stato di completamento dei percorsi e gli eventuali \gls{climbg} o \gls{poig} presenti. Si vuole poi avere la possibilità di condividere la posizione con gli altri partecipanti. All'interno di un \textit{tour} deve essere sempre presente il \textit{CyclingHero}, il pulmino di soccorso che segue il gruppo durante il viaggio. Infine, l'applicazione deve presentare un sistema di autenticazione.
+
+\subsection{Pianificazione iniziale}
+
+Prima dell'inizio del tirocinio si è svolta un'operazione di pianificazione del lavoro insieme all'azienda, la tabella \ref{tab:piano} riporta l'elenco di attività programmate e la loro durata prevista.
+
+\begin{longtable}{ |p{4cm}|p{2cm}|p{4cm}|  }
+        \caption{Pianificazione delle attività di inizio tirocinio.}
+        \label{tab:piano}
+        \hline
+        \textbf{Attività} & \textbf{Settimana} & \textbf{Ore di lavoro previste}
+        \hline
+        Comprensione del sistema e degli obiettivi & 1 & 20 \\ \hline
+        Analisi dei requisiti & 1 & 20 \\ \hline
+        Progettazione & 2-3 & 60 \\ \hline
+        Studio e \textit{setup} dell'ambiente di sviluppo & 3 & 20 \\ \hline
+        Implementazione & 4-7 & 150 \\ \hline
+        Test e validazione & 7-8 & 30 \\  \hline
+        Documentazione & 8 & 20  \\ \hline
+        \textbf{Totale} & & 320 \\ \hline
+\end{longtable}
+
+\subsection{Obiettivi}
+Con la tabella \ref{tab:obiettivi} vengono elencati gli obiettivi stabiliti dall'azienda ospitante prima dell'inizio del tirocinio.
+\noindent Il codice di un obiettivo è nel formato: \begin{center} \texttt{[O][Importanza][Numero]} \end{center}\\
+\noindent dove: \texttt{Numero} è un numero incrementale e univoco tra le importanze e \texttt{Importanza} definisce l'importanza del requisito secondo i seguenti criteri:
+\begin{itemize}
+    \item \texttt{O}: se l'obiettivo obbligatorio;
+    \item \texttt{D}: se l'obiettivo desiderabile;
+    \item \texttt{P}: se l'obiettivo opzionale.
+\end{itemize}
+
+\begin{longtable}{ |p{3cm}|p{7cm}|  }
+        \caption{Obiettivi del tirocinio.}
+        \label{tab:obiettivi}
+        \hline
+        \textbf{Codice} & \textbf{Descrizione}
+        \hline
+        \textbf{OO1} & La gestione e la pianificazione del progetto deve essere gestita tramite una \gls{kanbang} condivisa. \\ \hline
+        \textbf{OO2} & Il tirocinante deve praticare un'analisi e una progettazione dell'applicazione \textit{mobile} a partire dai requisiti raccolti. \\ \hline
+        \textbf{OO3} & Il tirocinante deve sviluppare il modulo di autenticazione dell'applicazione. \\ \hline
+        \textbf{OO4} & Il tirocinante deve sviluppare il modulo di raccolta e invio dei dati \gls{gpsg}. \\ \hline
+        \textbf{OO5} & Il tirocinante deve sviluppare il modulo per la gestione dei \textit{tour}, \textit{route} e \textit{POI}.\\ \hline
+        \textbf{OD1} & Il tirocinante deve essere in grado di coordinarsi con il cliente. \\ \hline
+        \textbf{OD2} & Il tirocinante deve sviluppare la \textit{suit} di \textit{testing} del prodotto. \\ \hline
+        \textbf{OD3} & Il tirocinante deve redarre una documentazione completa del prodotto.\\ \hline
+        \textbf{OP1} & Ulteriori modifiche al prodotto non comprese negli obiettivi obbligatori. \\ \hline
+\end{longtable}

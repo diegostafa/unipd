@@ -1,0 +1,29 @@
+INFERENZA DI TIPO
+- A = B                  --> B È DERIVATA
+- A* = NEW B             --> B È DERIVATA
+- A& = B                 --> B È DERIVATA
+- DYNAMIC_CAST<A>(B)     --> B È DERIVATA
+- STATIC_CAST<A>(B)      --> B È DERIVATA
+- FUN(A VAR); FUN(B)     --> B È DERIVATA
+- A FUN() { RETURN B }   --> B È DERIVATA
+- THROW B CATCH(A)       --> B È DERIVATA
+
+CONVERSIONI CONSENTITE DAI TEMPLATE NELLA DEDUZIONE IMPLICITAQ
+POSSO USARE --> SE HA
+- T& --> T
+- T[] --> T*
+- T --> const T
+- T --> const T&
+
+conversioni safe tra tipi (anche definiti da utente):
+
+T& --> T
+T[] --> T*
+T* --> (void)* (è un puntatore generico)
+T --> const T
+T --> const T*
+T --> const T&
+const P --> P
+
+NB: X --> Y (DA X CREO Y)  
+NB: da guardare come sx: parametro attuale, dx: parametro formale

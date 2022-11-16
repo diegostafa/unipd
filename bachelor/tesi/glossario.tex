@@ -1,0 +1,298 @@
+%%% ACRONIMI
+\renewcommand{\acronymname}{Acronimi e abbreviazioni}
+
+\newacronym[description={\glslink{apig}{Application Program Interface}}]
+    {api}{API}{Application Program Interface}
+
+\newacronym[description={\glslink{umlg}{Unified Modeling Language}}]
+    {uml}{UML}{Unified Modeling Language}
+
+\newacronym[description={\glslink{gpsg}{Global Positioning System}}]
+    {gps}{GPS}{Global Positioning System}
+
+\newacronym[description={\glslink{uig}{User Interface}}]
+    {ui}{UI}{User Interface}
+
+\newacronym[description={\glslink{blocg}{Business LOgic Component}}]
+    {bloc}{BLOC}{Business LOgic Component}
+
+\newacronym[description={\glslink{restg}{REpresentational State Transfer}}]
+    {rest}{REST}{REpresentational State Transfer}
+
+\newacronym[description={\glslink{poig}{Point Of Interest}}]
+    {poi}{POI}{Point Of Interest}
+
+\newacronym[description={\glslink{jsong}{JavaScript Object Notation}}]
+    {json}{JSON}{JavaScript Object Notation}
+
+\newacronym[description={\glslink{httpg}{HyperText Transfer Protocol}}]
+    {http}{HTTP}{Hypertext Transfer Protocol}
+
+\newacronym[description={\glslink{gpxg}{GPS Exchange Format}}]
+    {gpx}{GPX}{GPS Exchange Format}
+
+%% GLOSSARIO
+
+\newglossaryentry{apig}
+{
+    name=\glslink{api}{API},
+    text=API,
+    sort=api,
+    description={insieme di procedure che offrono servizi per lo sviluppo e integrazione di sistemi software diversi. La finalità è ottenere un'astrazione, di solito tra l'hardware e il programmatore o tra software a basso e quello ad alto livello semplificando così il lavoro di programmazione}
+}
+
+\newglossaryentry{umlg}
+{
+    name=\glslink{uml}{UML},
+    text=UML,
+    sort=uml,
+    description={in ingegneria del software \emph{UML, Unified Modeling Language} (ing. linguaggio di modellazione unificato) è un linguaggio di modellazione e specifica basato sul paradigma object-oriented. Gran parte della letteratura di settore usa tale linguaggio per descrivere soluzioni analitiche e progettuali in modo sintetico e comprensibile a un vasto pubblico}
+}
+
+\newglossaryentry{mockupg}
+{
+    name=\glslink{mockup}{Mockup},
+    text=mockup,
+    sort=mockup,
+    description={modello o prototipo dimostrativo incompleto del prodotto finale da realizzare}
+}
+
+\newglossaryentry{restg}
+{
+    name=\glslink{rest}{REST},
+    text=REST,
+    sort=rest,
+    description={è uno stile architetturale basato su \textit{HTTP} senza ulteriori livelli, per sistemi distribuiti stateless}
+}
+
+\newglossaryentry{tourg}
+{
+    name=\glslink{tour}{Tour},
+    text=tour,
+    sort=tour,
+    description={nel contesto applicativo indica un evento cicloturistico, è formato da un'insieme di giornate, dei partecipanti, un luogo di partenza e un luogo di arrivo}
+}
+
+\newglossaryentry{giornatag}
+{
+    name=\glslink{giornata}{Giornata},
+    text=giornata,
+    sort=giornata,
+    description={nel contesto applicativo indica una giornata del tour, è formato da almeno una \textit{route}, un luogo di partenza e un luogo di arrivo}
+}
+
+\newglossaryentry{routeg}
+{
+    name=\glslink{route}{Route},
+    text=route,
+    sort=route,
+    description={nel contesto applicativo indica un percorso ciclabile associato a una giornata, opzionalmente può contere \textit{climb} e \textit{POI}}
+}
+
+\newglossaryentry{climbg}
+{
+    name=\glslink{climb}{Climb},
+    text=climb,
+    sort=climb,
+    description={nel contesto applicativo indica un particolare tratto della \textit{route} delimitato da un punto di inizio e uno di fine, di cui si sanno determinate caratteristiche, come la ripidità e la difficoltà di salita}
+}
+
+\newglossaryentry{poig}
+{
+    name=\glslink{poi}{POI},
+    text=POI,
+    sort=poi,
+    description={nel contesto applicativo indica un punto di interesse, quindi un luogo rilevante per il \textit{tour}, è definito da una posizione geografica, una descrizione e una tipologia}
+}
+
+
+\newglossaryentry{flutterg}
+{
+    name=\glslink{flutter}{Flutter},
+    text=Flutter,
+    sort=flutter,
+    description={\gls{frameworkg} creato da \textit{Google} per la creazione di applicazioni multipiattaforma}
+}
+
+\newglossaryentry{hotreloadg}
+{
+    name=\glslink{hot-reloading}{Hot-reloading},
+    text=hot-reloading,
+    sort=hot-reload,
+    description={funzionalità che permette di aggiornare un applicazione in tempo reale modificando il sorgente, senza dover riavviare il processo in esecuzione}
+}
+
+\newglossaryentry{jsong}
+{
+    name=\glslink{json}{JSON},
+    text=JSON,
+    sort=json,
+    description={formato per lo scambio di dati, solitamente utilizzato per le comunicazioni \textit{client-server}}
+}
+
+\newglossaryentry{agileg}
+{
+    name=\glslink{agile}{Agile},
+    text=Agile,
+    sort=agile,
+    description={approccio di gestione di progetto e sviluppo che aiuta il \textit{team} a rilasciare un prodotto velocemente, rilasciando incrementalmente e in breve tempo versioni parziali del prodotto, in modo da avere un riscontro nel breve termine per aggiornare e raffinare i requisiti identificati}
+}
+
+\newglossaryentry{usecaseg}
+{
+    name=\glslink{caso d'uso}{Caso d'uso},
+    text=casi d'uso,
+    sort=caso d'uso,
+    description={insieme di scenari (sequenze di azioni) che hanno in comune uno scopo finale (obiettivo) per un \textit{attore}}
+}
+
+\newglossaryentry{attoreg}
+{
+    name=\glslink{attore}{Attore},
+    text=attore,
+    sort=attore,
+    description={Entità, umana o meno, che interagisce con il sistema}
+}
+
+\newglossaryentry{frameworkg}
+{
+    name=\glslink{framework}{Framework},
+    text=framework,
+    sort=framework,
+    description={Architettura logica di supporto sulla quale un software può essere progettato e realizzato, facilitandone lo sviluppo}
+}
+
+\newglossaryentry{httpg}
+{
+    name=\glslink{http}{HTTP},
+    text=HTTP,
+    sort=http,
+    description={Protocollo di comunicazione per lo scambio di ipertesti}
+}
+
+\newglossaryentry{sqlg}
+{
+    name=\glslink{sql}{SQL},
+    text=SQL,
+    sort=sql,
+    description={linguaggio standardizzato per database basati sul modello relazionale}
+}
+
+\newglossaryentry{linterg}
+{
+    name=\glslink{linter}{Linter},
+    text=linter,
+    sort=linter,
+    description={strumento che analizza il codice sorgente per contrassegnare errori di programmazione, bug, errori stilistici e costrutti sospetti}
+}
+
+\newglossaryentry{backendg}
+{
+    name=\glslink{backend}{Back-end},
+    text=back-end,
+    sort=backend,
+    description={in un \textit{modello client-server} il back-end rappresenta il \textit{server}. Tra processi di \textit{back-end} ci sono l'accesso ai dati e l'elaborazione delle richieste}
+}
+
+\newglossaryentry{frontendg}
+{
+    name=\glslink{frontend}{Frontend},
+    text=front-end,
+    sort=frontend,
+    description={rappresenta tutto ciò che concerne la parte di presentazione dei dati all'utente}
+}
+\newglossaryentry{clientserverg}
+{
+    name=\glslink{modello client-server}{Modello client-server},
+    text=modello client-server,
+    sort=frontend,
+    description={indica un'architettura di rete nella quale un computer \textit{client} si connette a un \textit{server} per fruire di un certo servizio}
+}
+\newglossaryentry{clientg}
+{
+    name=\glslink{client}{Client},
+    text=client,
+    sort=client,
+    description={componente software che fruisce di un servizio o di una risorsa offerti da un \textit{server}}
+}
+\newglossaryentry{serverg}
+{
+    name=\glslink{server}{Server},
+    text=server,
+    sort=server,
+    description={componente software che fornisce servizi e risorse ai \textit{client} che lo richiedono}
+}
+
+\newglossaryentry{gpsg}
+{
+    name=\glslink{gps}{GPS},
+    text=GPS,
+    sort=gps,
+    description={sistema di posizionamento e navigazione satellitare militare statunitense, attraverso una rete dedicata di satelliti artificiali in orbita, fornisce a un terminale mobile o ricevitore GPS informazioni sulle sue coordinate geografiche e sul suo orario in ogni condizione meteorologica, ovunque sulla Terra o nelle sue immediate vicinanze }
+}
+
+\newglossaryentry{gpxg}
+{
+    name=\glslink{gpx}{GPX},
+    text=GPX,
+    sort=gpx,
+    description={\textit{standard} progettato per il trasferimento di dati GPS tra applicazioni software. Può essere usato per descrivere punti, tracce e percorsi}
+}
+
+
+\newglossaryentry{sprintg}
+{
+    name=\glslink{sprint}{Sprint},
+    text=sprint,
+    sort=sprint,
+    description={intervallo di tempo fisso e ripetibile durante il quale viene creato un prodotto con più alto valore possibile. Di solito, uno Sprint dura un mese o meno}
+}
+
+\newglossaryentry{sprintreviewg}
+{
+    name=\glslink{sprint review}{Sprint review},
+    text=sprint review,
+    sort=sprint review,
+    description={ispezione del lavoro svolto durante lo \textit{sprint}, allo scopo di rilevare possibili errori e determinare le attività successive}
+}
+
+\newglossaryentry{sprintplanningg}
+{
+    name=\glslink{sprint planning}{Sprint planning},
+    text=sprint planning,
+    sort=sprint planning,
+    description={attività che da il via a uno \textit{sprint}, allo scopo di definire gli obiettivi da raggiungere}
+}
+
+
+\newglossaryentry{kanbang}
+{
+    name=\glslink{kanban}{kanban},
+    text=board kanban,
+    sort=board kanban,
+    description={sistema di rappresentazione grafico del lavoro nelle varie fasi di un processo, utilizza delle schede per rappresentare delle attività e le colonne per rappresentare ogni fase del processo. Le schede vengono spostate da sinistra a destra per mostrare i progressi}
+}
+
+\newglossaryentry{debuggerg}
+{
+    name=\glslink{debugger}{Debugger},
+    text=debugger,
+    sort=debugger,
+    description={strumento con lo specifico obiettivo di testare altri programmi, solitamente si occupa di lanciare un programma in un ambiente controllato, per permettere al programmatore di analizzare l'esecuzione del programma}
+}
+
+\newglossaryentry{userstoryg}
+{
+    name=\glslink{user story}{User story},
+    text=user story,
+    sort=user story,
+    description={documento che descrive le funzionalità e i requisiti del prodotto dalla parte del cliente}
+}
+
+\newglossaryentry{soundg}
+{
+    name=\glslink{sound-null safety}{Sound-null safety},
+    text=sound-null safety,
+    sort=sound-null safety,
+    description={proprietà dei linguaggi orientati agli oggetti che garantisce che nessun riferimento a oggetto abbia un puntatore nullo}
+}

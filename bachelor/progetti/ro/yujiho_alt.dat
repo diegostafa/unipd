@@ -1,0 +1,92 @@
+#---------------------------------------#
+#---------------INSIEMI-----------------#
+#---------------------------------------#
+
+# ALT : nuova rarità introdotta: leggenda
+set rarita 									:= comune rara super ultra leggenda;
+
+# ALT : il nuovo torneo ammette 5 mazzi
+set mazzo									:= primo secondo terzo quarto quinto;
+
+set livello									:= 1 2 3 4 5;
+
+#---------------------------------------#
+#---------------PARAMETRI---------------#
+#---------------------------------------#
+
+# --- PARAMETRI DEL TORNEO
+
+# ALT : minimo numero di carte abbassato a 30
+param min_carte								= 30;
+
+# ALT : massimo numero di carte a 80
+param max_carte								= 80;
+
+# ALT : minimo numero di mostri rimosso
+param min_mostri							= 0;
+
+# ALT : minimo numero di magie alzato a 20
+param min_magie								= 20;
+
+# ALT : minimo livello totale alzato a 40
+param min_lv_tot							= 40;
+
+# --- PARAMETRI CREATIVI
+
+# ALT : con almeno 3 mostri di livello 1
+param min_mostri_lv_1						= 3;
+
+# ALT : voglio almeno 3 mostri di livello 5
+param min_mostri_lv_5						= 3;
+
+param max_carte_ultra_secondo_terzo			= 3;
+
+# --- PARAMETRI DI RARITÀ
+
+# ALT : le carte ultra aumentano di valore
+param				valore_rarita := 
+comune				1
+rara				3
+super				5
+ultra				20
+leggenda			50;
+
+# --- PARAMETRI DI PREZZO
+
+# ALT : la domanda di mostri ultra rari ne aumenta il prezzo di 1 euro
+param costo_mostro:	1	2	3	4	5 := 
+comune				11	12	13	14	15
+rara				13	14	16	17	18
+super				20	21	23	25	27
+ultra				41	42	43	44	45
+leggenda			110	111	112	113	114;
+
+# ALT : l'alta offerta di magie ne diminuisce il prezzo di 1 euro
+param				costo_magia := 
+comune				5
+rara				6
+super				9
+ultra				25
+leggenda			55;
+
+param				costo_trappola := 
+comune				5
+rara				6
+super				9
+ultra				25
+leggenda			90;
+
+# ALT : bonus soldi vinti al torneo
+param soldi_disponibili						= 180;
+
+# --- COSTANTI MINIME DI ATTIVAZIONE
+
+# ALT : aggiorna somma di livelli massima
+param SOMMA_LIVELLI_MASSIMA					= 400;
+
+# ALT : aggiorna numero di mazzi
+param NUM_MAZZI								= 5;
+
+param NUM_LIVELLI							= 5;
+
+param NUM_RARITA							= 5;
