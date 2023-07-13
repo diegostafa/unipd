@@ -1,0 +1,74 @@
+reset;									# SETUP 
+model yujiho.mod;						# SELEZIONE DEL MODELLO
+data yujiho_alt.dat;					# SELEZIONE DEI DATI
+option solver cplex;					# SELEZIONE DEL RISOLUTORE
+solve;									# AVVIO DEL RISOLUTORE
+
+#---------------------------------------#
+#-----VISUALIZZA FUNZIONE OBIETTIVO-----#
+#---------------------------------------#
+
+display rarita_mazzi;
+
+#---------------------------------------#
+#----VISUALIZZA VARIABILI PRINCIPALI----#
+#---------------------------------------#
+
+display {m in mazzo, l in livello, r in rarita}
+	carte_mostro[r, l, m];
+
+display {m in mazzo, r in rarita}
+	carte_magia[r, m];
+
+display {m in mazzo, r in rarita}
+	carte_trappola[r, m];
+
+#---------------------------------------#
+#----VISUALIZZA VARIABILI DI SUPPORTO---#
+#---------------------------------------#
+
+# --- V11
+display
+	min_super_secondo_terzo;
+
+# --- V13
+display
+	differenza_assoluta_super_comuni;
+
+#---------------------------------------#
+#------VISUALIZZA VARIABILI BINARIE-----#
+#---------------------------------------#
+
+# --- V5
+display {m in mazzo}
+	ha_60_carte[m];
+
+# --- V6
+display {m in mazzo}
+	lv_tot_almeno_30[m];
+
+# --- V7
+display {r in rarita, m in mazzo}
+	ha_rarita[r, m];
+display {m in mazzo}
+	non_ha_tutte_rarita[m];
+
+# --- V9
+display {l in livello, m in mazzo}
+	ha_lv[l, m];
+display {m in mazzo}
+	non_ha_tutti_lv[m];
+
+# --- V10
+display
+	ha_3_ultra_secondo_mazzo;
+display
+	ha_3_ultra_terzo_mazzo;
+
+# -- V14
+display {m in mazzo}
+	ha_10_lv_1[m];
+display {m in mazzo}
+	ha_5_lv_5[m];
+display ce_un_mazzo_con_10_lv_1;
+	

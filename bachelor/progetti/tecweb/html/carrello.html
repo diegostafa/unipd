@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <page-name>Carrello</page-name>
+    <title>Carrello - Fuji Sushi</title>
+    <!-- meta data-->
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="keywords"
+        content="ordine, carrello, riepilogo, consegna, dettagli, Fuji, sushi, ristorante, giapponese" />
+    <meta name="description" content="pagina per visualizzare un riepilogo dei piatti ordinati, per inserire 
+                                      i dettagli della consegna e confermare l'ordine" />
+    <meta name="author" content="Samuele Rizzato, Diego Stafa, Luciano Wu" />
+    <link rel="stylesheet" media="screen" href="/srizzato/css/style.css" />
+    <link rel="stylesheet" media="print" href="/srizzato/css/print.css" />
+    <noscript>
+        <link rel="stylesheet" media="screen" href="/srizzato/css/noscript.css">
+    </noscript>
+    <script src="/srizzato/js/script.js"></script>
+    <link rel="shortcut icon" type="image/png" href="/srizzato/img/utils/logo.png">
+</head>
+
+<body>
+    <page-header />
+
+    <main id="content">
+        <section class="section-block">
+            <h1 class="section-title">Il tuo carrello</h1>
+            <div id="cart-items" class="section-content">
+                <general />
+                <dishes />
+                <total-price />
+            </div>
+        </section>
+        <cart-form />
+    </main>
+    <div id="go-top">
+        <a href="#content">
+            <img src="/srizzato/img/utils/up.png" alt="torna in cima alla pagina">
+        </a>
+    </div>
+    <footer>
+        <div class="foot-content">
+            <p class="foot-title">Contatti</p>
+            <ul>
+                <li><address>Via Trieste 63, Padova</address></li>
+                <li><a class="mail-link" href="mailto:tecweb.2021@gmail.com">tecweb.2021@gmail.com</a></li>
+                <li><a class="tel" href="tel:+042566888899">0425 6688 8899</a></li>
+                <li>Siamo aperti 24/7</li>
+            </ul>
+        </div>
+        <div class="foot-content">
+            <p class="foot-title">tecnologie utilizzate</p>
+            <ul>
+                <li>XHTML5</li>
+                <li>CSS3</li>
+                <li>ES2015</li>
+                <li>PHP7</li>
+                <li>MySQL</li>
+            </ul>
+        </div>
+        <div class="foot-content">
+            <p class="foot-title">proprietari</p>
+            <ul>
+                <li>Rizzato Samuele</li>
+                <li>Stafa Diego</li>
+                <li>Wu Luciano</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

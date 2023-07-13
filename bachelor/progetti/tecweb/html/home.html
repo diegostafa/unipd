@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <title>Fuji Sushi</title>
+    <page-name>Home</page-name>
+    <!-- meta data-->
+
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="description" content="Home page Fuji sushi ristorante giapponese">
+    <meta name="keywords" content="home , sushi, fuji, ristorante, giapponese">
+    <meta name="author" content="Rizzato Samuele, Stafa Diego, Wu Luciano">
+    <link rel="stylesheet" media="screen" href="/srizzato/css/style.css">
+    <link rel="stylesheet" media="print" href="/srizzato/css/print.css">
+    <noscript>
+        <link rel="stylesheet" media="screen" href="/srizzato/css/noscript.css">
+    </noscript>
+    <script src="/srizzato/js/script.js"></script>
+    <link rel="shortcut icon" type="image/png" href="/srizzato/img/utils/logo.png">
+</head>
+
+<body>
+    <page-header />
+    <main id="content">
+        <div class="front-img"></div>
+        <hr />
+        <section id="recent-news" class="section-block">
+            <h1 class="section-title">le ultimissime</h1>
+            <div class="section-content">
+                <last-news />
+            </div>
+        </section>
+        <hr />
+        <section class="section-block reversed">
+            <h1 class="section-title">i <span lang="en">top</span> del mese</h1>
+            <div id="top-del-mese" class="section-content">
+                <p class="section-desc">Questo mese i nostri clienti hanno apprezzato:
+                </p>
+                <top-dish />
+                <p class="section-desc">Vai al <a href="/srizzato/php/menu.php">menù completo!</a></p>
+            </div>
+        </section>
+        <hr />
+        <section class="section-block">
+            <h1 class="section-title">chi siamo</h1>
+            <div class="section-content">
+                <p class="section-desc">Fuji Sushi è un ristorante dai sapori e profumi orientali nato nel lontano 2006,
+                    da quel momento è riuscito a raggiungere il cuore e lo stomaco di migliaia di persone, grazie
+                    soprattutto alla
+                    nostra serietà e rispetto nei confronti del cliente.</p>
+                <p class="section-desc">Il nostro staff è composto da Rizzato Samuele e Stafa Diego, i due formidabili
+                    maestri del sushi, e da Wu Luciano, l'instancabile cameriere pronto a soddisfare ogni vostra
+                    richiesta.</p>
+                <p class="section-desc">Il ristorante offre decine di piatti differenti a prezzi fissi, con la
+                    possibilità di ordinare take-away.</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="go-top">
+        <a href="#content">
+            <img src="/srizzato/img/utils/up.png" alt="torna in cima alla pagina">
+        </a>
+    </div>
+    <footer>
+        <div class="foot-content">
+            <p class="foot-title">Contatti</p>
+            <ul>
+                <li><address>Via Trieste 63, Padova</address></li>
+                <li><a class="mail-link" href="mailto:tecweb.2021@gmail.com">tecweb.2021@gmail.com</a></li>
+                <li><a class="tel" href="tel:+042566888899">0425 6688 8899</a></li>
+                <li>Siamo aperti 24/7</li>
+            </ul>
+        </div>
+        <div class="foot-content">
+            <p class="foot-title">tecnologie utilizzate</p>
+            <ul>
+                <li>XHTML5</li>
+                <li>CSS3</li>
+                <li>ES2015</li>
+                <li>PHP7</li>
+                <li>MySQL</li>
+            </ul>
+        </div>
+        <div class="foot-content">
+            <p class="foot-title">proprietari</p>
+            <ul>
+                <li>Rizzato Samuele</li>
+                <li>Stafa Diego</li>
+                <li>Wu Luciano</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

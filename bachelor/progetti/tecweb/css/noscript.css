@@ -1,0 +1,19 @@
+#ns-menu nav.top-nav.ns-menu,
+#top-header .ns-hide,
+#menu-side-panel .ns-hide,
+.dish .ns-hide{
+    display: none;
+}
+
+
+#ns-menu nav.top-nav.ns-menu li{
+    margin: 0 0.2rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    #ns-menu nav.top-nav.ns-menu{
+        display: block;
+    }
+}

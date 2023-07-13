@@ -1,0 +1,7 @@
+QListView::item
+{
+    height: 80px;
+	background-color: black;
+	color:white;
+    font-size: 16px;
+}

@@ -1,0 +1,58 @@
+#---------------------------------------#
+#---------------INSIEMI-----------------#
+#---------------------------------------#
+
+set rarita 									:= comune rara super ultra;
+set mazzo									:= primo secondo terzo;
+set livello									:= 1 2 3 4 5;
+
+#---------------------------------------#
+#---------------PARAMETRI---------------#
+#---------------------------------------#
+
+# --- PARAMETRI DEL TORNEO
+param min_carte								= 40;
+param max_carte								= 60;
+param min_mostri							= 20;
+param min_magie								= 10;
+param min_lv_tot							= 30;
+
+# --- PARAMETRI CREATIVI
+param min_mostri_lv_1						= 10;
+param min_mostri_lv_5						= 5;
+param max_carte_ultra_secondo_terzo			= 3;
+
+# --- PARAMETRI DI RARITÀ
+param				valore_rarita := 
+comune				1
+rara				3
+super				5
+ultra				8;
+
+# --- PARAMETRI DI PREZZO
+param costo_mostro:	1	2	3	4	5 := 
+comune				11	12	13	14	15
+rara				13	14	16	17	18
+super				20	21	23	25	27
+ultra				31	32	33	34	35;
+
+param				costo_magia := 
+comune				15
+rara				18
+super				27
+ultra				35;
+
+param				costo_trappola := 
+comune				5
+rara				6
+super				9
+ultra				25;
+
+param soldi_disponibili						= 150;
+
+# --- COSTANTI MINIME DI ATTIVAZIONE
+
+param SOMMA_LIVELLI_MASSIMA					= 300;
+param NUM_MAZZI								= 3;
+param NUM_LIVELLI							= 5;
+param NUM_RARITA							= 4;

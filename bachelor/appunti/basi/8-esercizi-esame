@@ -1,0 +1,123 @@
+MODELLO ER
+__________________________________________________________________
+
+IDENTIFICATORI
+- un id interno deve essere formato solo da attributi con card. (1,1)
+- un id esterno esiste solo in relazioni uno a molti in entità con card (1,1)
+- un id esterno può coinvolgere relazioni con id esterni a patto di non generare dei cicli
+- ogni entità deve avere almeno un id interno o esterno
+
+GENERALIZZAZIONE
+- totale: il genitore ricade in uno dei figli
+- parziale: non è totale
+- esclusiva: il genitore è al massimo uno dei figli
+- sovrapposta: non è esclusiva
+- sottoinsieme: il genitore ha un solo figlio
+
+COMPRENSIONE DEL TESTO:
+- parte di: 2 
+    - è una relazione uno a molti con partecipazione bbbiigatoria, necessita di id esterno
+    - è una relazione uno a molti con partecipazione opzionale
+-instance of: è una relazione 
+
+
+MODELLO LOGICO
+__________________________________________________________________
+
+
+RISTRUTTURAZIONE
+- analisi delle ridondanze: quali attributi sono ricavabili e quindi eliminabili
+- eliminazione delle generalizzazioni
+- accorpamento di entita e relazioni
+- scelta degli identificatori
+
+ELIMINAZIONE DELLE GENERALIZZAZIONI
+1. accorpamento sul padre
+	- si eliminano i figli
+	- si aggiungono i loro attributi al padre
+	- si aggiunge un attributo al padre che specifica il tipo
+		- null se la gener. è parziale, not null se è totale
+	- le relazioni del padre rimangono inviariate
+	- le relazioni sui figli si collegano al padre con cardinalità minima 0 (partec. opzionale)
+
+	- pro: conveniente quando le operazioni non vanno a distinguere tra padre e figlio
+	- contro: valori nulli, spreco di memoria
+
+2. accorpamento sui figli
+	- si elimina il padre
+	- si aggiungono i suoi attributi ai figli
+	- le relazioni del padre si sdoppiano sui figli
+	- le relazioni sui figli rimangono inviariate
+
+	- pro: conveniente quando le operazione vanno a distinguere tra padre e figlio 
+	- contro: si può usare solo in generalizzazioni totali
+
+3. sostituzione della generalizzazione con una relazione
+	- si crea una relazione che collega il padre per ogni figlio
+	- questa relazioni hanno cardinalità (0,1) sul padre e (1,1) sui figli
+	- i figli sono identificati esternamente dal padre
+	- le relazioni su padre e figli rimangono invariate
+
+	- pro: conventiente quando la generalizzazione è parziale
+
+
+RISTRUTTURAZIONE DELLE ENTITÀ
+- decomposizione: di base si spezza un'entitò che contiene attributo logicamente separati
+							es, impiegato lo si può spezzare in dati anagraici e lavorativi con un relazione con ambo cardinalità (1,1) e un id esterno
+- composizione: il contrario della decomposizione, possibile solo in relazioni 1 a 1, se le card. minima è 0 gli attributi accorpati sono opzionali
+- eliminazione di attributi multivalore: un attributo con cardinalità (1,n) diventa un entità su relazione 1 a molti
+
+di base si spezza un entità se si accedono gli attributi separatemente
+
+SCELTA DEGLI IDENTIFICATORI:
+- si scelgiie un id per ogni entità
+- in assenza di un id si aggiunge un attributo codice generico
+
+TRADZIONE ER LOGICO
+- le entità diventano relazioni con chiave il loro id
+- le relazioni molti a molti diventano relazioni con attributi chiavi esterne delle entità coinvolte
+- le relazioni uno a molti vanno ad aggiungere la chiave esterna sull'entità uno (mai sulla molti)
+- le relazioni ricorsive si vedono come relazioni molti a molti, le chiavi esterne sono sula stessa entità ma hanno significato diverso
+- le relazioni n-arie si vedono come relazioni molti a molti, le chiavi esterne sono le entità coinvolte
+- se una relazione ha degli attributi questi vanno a finire nell'entità che ha la chiave esterna
+- se un entità ha una card. (0,1) allora la chiave esterna e tutti gli attributi che guadagna possono essere null
+- se un entità è identificata esternamente la sua chiave conterrà anche la chiave esterna
+
+ALGEBRA RELAZIONALE ED SQL
+__________________________________________________________________
+
+COSTRUTTI ALGEBRA RELAZIONALE:
+- unione
+- differenza
+- intersezione
+- prodotto cartesiano
+
+- selezione
+- proiezione
+- ridenominazione
+- join
+
+SQL:
+- operatori aggregati --> count max min avg sum
+- ANY ALL --> vanno preceduti da un operatore tipo = > <>
+- possibili combinazioni:
+	- attributi (not) in (subquery con stesse colonne)
+	- attributi >=<> ANY/ALL (subquery...)
+	- attributi 
+
+
+NORMALIZZAZIONE
+__________________________________________________________________
+
+PUNTO A:
+- si semplificano le dipendenze
+- si calcola la chiusura di ogni dipendenza (X+)
+
+
+
+INDICI
+__________________________________________________________________
+
+B+ tree vantaggi:
+- accesso su intervalli
+- order by
